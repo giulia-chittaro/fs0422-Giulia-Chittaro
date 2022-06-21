@@ -7,12 +7,23 @@
     <title>Document</title>
 </head>
 <body>
+    <!--action definisce dove inviare i dati e sposta l'utente all'indirizzo file indicato.
+    method indica la modalità di invio dei dati
+method post -> non sporco l'indirizzo e posso inviare una quantità grande di dati
+method get-> sporca l'indirizzo mandando una grande quantità di dati-->
    
-<form action="">
-    <input name="nome" type="number" placeholder="Numero">
+<form action="" method="post">
+
+    <label for="nome">Nome</label>
+    <input id="nome" name="nome" type="number" placeholder="Numero">
     <input name="num" type="email" placeholder="La tua email">
     <input name="email" type="password" placeholder="Inserisci la password">
     <input name="psw" type="text" placeholder="Nome">
+    
+<label for="consenso">Acetto la privacy policy</label>
+    <input id="consenso" type="checkbox">
+    
+    <br>
 
 <select name="city">
     <option value="">--seleziona--</option>
