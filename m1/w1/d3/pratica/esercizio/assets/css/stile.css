@@ -1,0 +1,121 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+
+
+#cv{
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+   text-transform: uppercase;
+   color:white;
+   line-height:50px ;
+
+}
+
+#cv > span{
+    color:rgb(28, 126, 212);
+    background-color: white;
+   font-size:large;
+}
+
+#descript{
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+    text-transform: uppercase;
+    color:black;
+    line-height:50px;
+}
+#rettangolo{
+    background-color:rgb(28, 126, 212);
+    width:300px;
+    height:200px;
+    margin:auto;
+    margin-bottom:-200px ;
+}
+#info{
+    color:rgb(28, 126, 212);
+    text-align: center;
+    text-transform:uppercase;
+    font-size:1.5em;
+    line-height: 50px;
+ 
+}
+/* MAIN */
+main{
+    text-align: center;
+}
+/* ELEMENTI NEL MAIN */
+.number{
+    color: red;
+    text-decoration:underline red;
+}
+.title{
+    color:rgb(28, 126, 212);
+    text-transform: uppercase;
+    font-size:1.5em;
+    line-height:50px;
+}
+figure > figcaption{
+    line-height: 25px;
+}
+address{
+    line-height: 25px;
+}
+p > strong{
+    color:rgb(28, 126, 212);
+}
+p > mark{
+    color: white;
+    background-color:rgb(28, 126, 212);
+}
+
+#epicode{
+    color: red;
+    text-decoration: underline red;
+}
+
+dd > strong{
+    color:rgb(28, 126, 212);
+}
+
+#cit{
+    background-color: grey;
+    height:100px;
+    width:250px;
+    margin: auto;
+    line-height:35px;
+    text-align: center;
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+    background-color:black;
+    height:150px;
+    width:350px;
+    margin: auto;
+    line-height:25px;
+}
+
+#ctrl{
+    color: yellow;
+    font-style: oblique;
+   font-weight: bold;
+}
+#scaricacv{
+    color: red;
+    text-decoration: underline red;
+}
+
+footer > p{
+    color: white;
+}
+
+p > small{
+    color: gainsboro;
+}
