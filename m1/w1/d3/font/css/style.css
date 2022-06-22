@@ -1,0 +1,39 @@
+/*tipografia */
+
+@font-face {
+    font-family:MioFont;
+    src: url(../webfont/ufonts.com_tw-cen-mt.ttf) format("truetype");
+}
+
+
+h1{
+    font-size:1rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+h2 span{
+    font-size:2em ;
+}
+
+h3{
+    font-family:MioFont;
+}
+
+h4{
+    text-transform:uppercase;
+    text-align:center;
+}
+
+h5{
+    text-indent:30px ;
+}
+p{
+    line min-height:2rem;
+    letter-spacing:5px;
+    text-shadow: /*ombra ad una scritta */
+
+
+}

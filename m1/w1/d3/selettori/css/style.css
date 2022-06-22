@@ -1,0 +1,36 @@
+
+    /* ; da aggiungere dopo il red per esempio solo se inseriamo altri elementi
+    i colori possono essere scelti per nome; red yellow etc.
+    Devono però essere colori preimpostati nel linguaggio
+    
+    Posso anche utilizzare i colori esadecimali
+    rgb
+    rgba
+    */
+
+    /*selezione attraverso il tag */
+    div{
+        color:red
+}
+
+/* # vuol dire cerca tutti gli id*/
+#div-blue{
+    color: blue;
+}
+
+/* . cerca tutte le classi */
+.testo-verde{
+    color: green;
+}
+span{
+    font-style: italic;
+}
+
+/*inserendo il > vuol dire che do questa caratteristica ai figli di primo livello di div */
+#area-grassetto > span{
+    font-weight: bold;
+}
+
+#area-grassetto div span{
+  background-color: blue;
+}

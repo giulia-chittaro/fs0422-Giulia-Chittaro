@@ -1,0 +1,36 @@
+#main-header .list-item a{
+    text-decoration:none;
+    color:black;
+
+}
+
+#main-header a{
+    text-decoration:none;
+    color:blue;
+
+}
+
+a{
+    text-decoration:none;
+    color:rebeccapurple;
+}
+/* Fra i due comandi che sono la stessa cosa vince il secondo!! Quindi l'ultimo inserito!
+tranne quando c'è una specificità tipo id. */
+
+
+/*altri modi per selezionare */
+
+/*div che ha anche la classe sfondo blu scritto div.sfondo-blu
+invece scrivvo div .sfondo-blue vuol dire sfondo-blu figlio di div*/
+
+.sfondo-blu{ /*funziona solo se la classe è applicata al div */
+    background-color: red;
+}
+
+div.sfondo-blu.testo-grassetto{/*funziona solo se entrambe le classei sono applicate al div */
+font-weight: bold;
+}
+
+.sfondo-blu, .testo-grassetto{
+    height: 50px;
+}

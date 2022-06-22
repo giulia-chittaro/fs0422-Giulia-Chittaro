@@ -1,0 +1,16 @@
+blockquote + p{
+      color: red;
+}
+/*tutto le p dopo un blockquote sono di colore rosso */
+
+button{
+    background-color:rebeccapurple;
+transition: background-color 1s;
+}
+
+button:hover{
+    background-color:yellow;
+    border:none;
+    
+}
+
