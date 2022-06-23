@@ -1,0 +1,242 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    background-image: url(../img/sfondo.png);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+/* HEADER */
+header{
+  
+   background-image: linear-gradient(rgb(139, 214, 244), rgb(8, 110, 206));
+   height: 350px;
+   width: 400px;
+   margin: auto;
+   box-shadow: 1px 2px rgb(177, 169, 169) ;
+}
+
+.titoli-header{
+text-transform: uppercase;
+color: white;
+text-align: center;
+padding: 15px;
+line-height: 25px;
+text-decoration:none;
+font-weight: bold;
+
+}
+
+#logo{
+    padding: 30px;
+    text-align: center;
+    
+
+}
+
+#lista{
+    text-align: center;
+    padding: 2opx;
+}
+/* MAIN */
+main{
+   background-color: white;
+   margin:25px ;
+   box-shadow: 1px 3px 3px 3px grey;
+}
+
+h1{
+    font-size: 2em;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#description{
+    color: grey;
+    text-align: center;
+    line-height: 1.8;
+}
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+article{
+    text-align: justify;
+    padding: 35px;
+    line-height: 1.2;
+}
+
+strong{
+    color:rgb(179, 18, 88);
+    
+}
+
+code{
+    background-color: rgb(202, 202, 202);
+    border-radius: 7px;
+}
+
+ul{
+    line-height: 1.8;
+    padding: 10px;
+    border: 10px;
+}
+
+h2{
+    line-height: 1.8;
+    padding-top: 10px;
+}
+
+h2 + p{
+    padding-bottom: 10px;
+}
+
+ol{
+    padding-bottom: 10px ;
+}
+
+ol + p{
+    padding-bottom: 10px;
+}
+
+/* TABELLE */
+
+#table{
+    font-weight: bold;
+    font-style: oblique;
+    line-height: 1.2;
+}
+
+table{
+margin: auto;
+box-shadow: 0px 2px 0px 0px rgb(15, 131, 208);
+}
+
+tr{
+    margin: auto;
+    padding: 5px;
+}
+
+td{
+    margin: auto;
+    padding: 20px;
+    
+}
+
+th{
+    margin: auto;
+    padding: 20px;
+    word-wrap: break-word;
+
+}
+
+thead{
+    background-color: rgb(15, 131, 208);
+}
+
+table tr:nth-of-type(even){
+    background-color: rgb(205, 205, 205);
+}
+
+/* FORM */
+
+#validazione{
+    padding: 10px;
+}
+
+#tool{
+    color: rgb(15, 131, 208) ;
+}
+
+iframe{
+    border-radius: 10px;
+    margin: auto;
+}
+
+#novità{
+    background-color: rgb(179, 176, 176);
+    margin-top: 30px;
+    height: 450 px;
+    width: 350 px;
+}
+
+.novità{
+    text-align: center;  
+}
+
+#user_email{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: dashed;
+}
+
+button{
+background-color: rgb(33, 123, 169);
+color: white;
+}
+
+/* ELEMENTI NELL' ASIDE */
+#correlati{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.0;
+    padding: 10px;
+}
+
+
+
+#post2{
+    background-color: rgb(206, 203, 203);
+   height: 100px;
+   width: 200px;
+   margin: auto;
+ 
+}
+
+#post3{
+    background-color: rgb(206, 203, 203);
+    height: 100px;
+    width: 200px;
+    margin: auto;
+   
+}
+
+
+#post4{
+    background-color: rgb(206, 203, 203);
+    height: 100px;
+    width: 200px;
+    margin: auto;
+    
+}
+
+.post{
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/* FOOTER */
+
+footer{
+background-color: rgb(28, 143, 214);
+height: 200px;
+width: 350px;
+margin: auto;
+margin-bottom: 10px;
+
+}
+
+#footer{
+    line-height: 1.8;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer{
+padding: 15px;
+line-height: 1.8;
+color: white;
+text-align: center;
+}
