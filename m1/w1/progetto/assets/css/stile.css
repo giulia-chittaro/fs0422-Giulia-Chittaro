@@ -1,0 +1,176 @@
+/*header*/
+header{
+  background-image:url(../images/banner.jpg);
+  background-size: cover;
+  width:450px;
+  
+}
+#logo{
+    background-color: black;
+    width: 100hv;
+}
+.center{
+display: block;
+margin-right: auto;
+margin-left: auto;
+width: 50%;
+}
+
+h1{
+    color:#25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size:2.5rem;
+    margin: 2rem;
+
+}
+
+h1 + p{
+    text-align: center;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    font-family: 'Open Sans', sans-serif;
+    margin: 2rem;
+}
+#partiamo{
+    background-color:#e22d0e ;
+    width: 80px;
+    text-transform: uppercase;
+    color: white;
+    t-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border-radius: 3px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#header{
+padding-bottom: 35px;
+padding-top: 35px;
+}
+
+/*main*/
+
+h3{
+    color:#25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    
+}
+
+p{
+    color: #393d41;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size:1.2rem ;
+    margin: 2rem;
+}
+
+
+#circle{
+    border-radius: 100%;
+    width:225px;
+    margin-bottom: 2rem;
+}
+
+section{
+    text-align: center;
+}
+ 
+section.orange{
+    background-color: #e22d0e;
+    color: white;
+    margin: auto;
+    padding-top:1.5rem ;
+    padding-bottom:1.5rem ;
+   
+
+}
+
+section.orange h2{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    
+}
+
+section.orange p{
+    color: white;
+    font-style: italic;
+    line-height: 1.65;
+    font-size: 1.2;
+    margin: 2rem;
+}
+
+section.orange h3,h6{
+    font-family: 'Open Sans', sans-serif;
+line-height: 1.5rem;
+color: white;
+}
+
+#set1{
+    border: 1px solid #dee1e3;
+    padding-top: 20px;  
+    text-align: center;
+}
+#set2{
+    border: 1px solid #dee1e3;
+    padding-top: 20px;
+    text-align: center;
+}
+#set3{
+    border: 1px solid #dee1e3;
+    padding-top: 20px;
+    text-align: center;
+
+}
+.info{
+    width: 300px;
+    text-align: center;
+    border: 1px solid #dee1e3;
+}
+
+.set{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+}
+
+.footer{
+    background-color:#25a2c3 ; 
+     
+}
+#contattaci{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+div.footer p{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65rem;
+    font-size:1.2rem ;
+    
+}
+div.footer a{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65rem;
+    font-size:1.2rem ;
+
+}
+#divisore{
+    border: 1px dashed white;
+}
