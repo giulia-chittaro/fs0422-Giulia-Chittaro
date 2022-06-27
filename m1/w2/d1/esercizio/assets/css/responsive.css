@@ -21,7 +21,11 @@ margin: 0px 5px 10px;
       }
 
 iframe{
-    display: inline;
+    height: calc((400px/9)*16);
+    max-height: 480px;
+}
+section{
+    width: ;
 }
 aside{
     width: 480px;
@@ -30,6 +34,7 @@ aside{
 .aside{
     width: calc(100% / 3);
     display: inline-block;
+    
 
 }
   }
@@ -41,20 +46,13 @@ aside{
         padding-bottom: 10px;
         margin: 40px 50px 40px 100px;
       }
-    
+      iframe{
+        height: calc((400px/9)*16);
+        max-height: 480px;
+    }
       #table{
         margin: auto;
 
-      }
-      #pre-corr{
-        margin: auto;
-        width: 100%;
-
-      }
-
-      #pre-corr section{
-        display: inline-block;
-        width: calc(100% / 2);
       }
       aside{
             width: 780px;
