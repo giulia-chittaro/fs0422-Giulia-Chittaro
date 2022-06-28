@@ -60,19 +60,24 @@ main {
     margin-bottom:1.5em ;
 }
 .img-left{
+    width: 120px;
+    height: 120px;
     float: left;
+    padding-top: 10px;
     padding-right: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     margin-right: 10px;
+    border: 5px solid rgb(89, 149, 209);
+    outline: 5px solid orange;
+    
 }
-
 .img-left + p{
     padding-bottom: 20px;
     padding-top: 30px;
 }
 #img-badge{
-    padding-left: 30px;
-    padding-top: 20px;
+    padding-left: 40px;
+    padding-top: 30px;
 }
 section { 
     background-color: #e3e3e3;
