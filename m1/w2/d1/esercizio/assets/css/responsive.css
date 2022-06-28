@@ -28,14 +28,14 @@ section{
     width: ;
 }
 aside{
-    width: 480px;
-    margin: auto;
+    display: inline;
+    width: 100%;
+    margin: 0 auto;
+
 }
 .aside{
     width: calc(100% / 3);
     display: inline-block;
-    
-
 }
   }
 
@@ -55,7 +55,7 @@ aside{
 
       }
       aside{
-            width: 780px;
+            width: 100%;
             margin: auto;
         }
         .aside{
