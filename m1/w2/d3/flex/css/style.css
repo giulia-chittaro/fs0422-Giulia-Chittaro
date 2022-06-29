@@ -1,0 +1,148 @@
+h3{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    border-top: 1px solid #000;
+}
+.container{
+    display: flex;
+}
+
+.blocco{
+    height: 100px;
+    width: 150px;
+    background-color: #ccc;
+    border: 1px solid #fff;
+}
+.blocchi-auto .blocco{
+    height: auto;
+}
+
+.blocchi-larghezza-auto .blocco{
+    width: auto;
+}
+
+#n2{
+    flex-direction: column;
+}
+
+#n3{
+    flex-direction: row-reverse;
+}
+#n4{
+    flex-direction: column-reverse;
+}
+#n6{
+    flex-wrap: wrap; /*fa si che gli elementi prendano il loro spazio senza essere ridimensionati. se gli elementi eccedono alla dimensione del genitore questi vanno a capo */
+}
+
+#n7{
+    flex-wrap: wrap-reverse;
+}
+
+#n8{
+    flex-wrap: wrap;
+}
+#n9{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#n10{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#n11{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#n12{ /*fa si che lo spazio attorno alle colonne sia uguale. ogni elemento ha il suo spazio, che si somma con gli spazi degli altri elementi */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#n13{ /* spazio equo fra colonne e spazio dal bordo e le colonne */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#n14{
+  
+    height: 200px;
+    align-items: flex-start;
+/* fa si che gli elementi si posizionino allo start verticale.*/
+
+/*gli elementi di dimensioni differenti non si adattano a le impostazioni degli altri elementi */
+}
+
+#n14 .blocco:first-child{
+  height: 100px ;
+}
+
+#n15{
+  
+    height: 200px;
+    align-items: flex-end;
+
+}
+
+#n15 .blocco:first-child{
+  height: 100px ;
+}
+
+#n16{
+  
+    height: 200px;
+    align-items:center;
+
+}
+
+#n16 .blocco:first-child{
+  height: 100px ;
+}
+
+#n17{
+  
+    height: 200px;
+    align-items:stretch;
+}
+#n18{
+  
+    height: 200px;
+    align-items:baseline;
+}
+
+#n19{
+   height: 400px;
+   background-color: cyan;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#n20{
+    height: 400px;
+    background-color: cyan;
+     flex-wrap: wrap;
+     align-content: flex-end;
+ }
+
+ #n21{
+    height: 400px;
+    background-color: cyan;
+     flex-wrap: wrap;
+     align-content: center;
+ }
+
+ #n22{
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    background-color: aqua;
+    height: 100px;
+ }
+
+ #n26{
+
+ }
