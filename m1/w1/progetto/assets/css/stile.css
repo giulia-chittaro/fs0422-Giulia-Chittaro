@@ -21,6 +21,7 @@ h1{
     text-align: center;
     font-size:2.5rem;
     margin: 2rem;
+    line-height: 1.5;
 
 }
 
@@ -36,22 +37,19 @@ h1 + p{
     cursor: pointer;
     background-color:#e22d0e ;
     border-color: #e22d0e;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 #partiamo{
-    background-color:#e22d0e ;
-    width: 80px;
+    width: 150px;
     text-transform: uppercase;
-    color: white;
     t-family: 'Montserrat', sans-serif;
     text-align: center;
     border-radius: 3px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px; 
-    margin-left: auto;
-    margin-right: auto;
-   
+    padding: 10px;
+    margin: auto;
+    color: white;
 }  
 #header{
 padding-bottom: 35px;
@@ -65,8 +63,7 @@ h3{
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     text-align: center;
-    margin: 2rem;
-    
+    margin: 2rem;   
 }
 
 p{
@@ -131,7 +128,7 @@ color: white;
 }
 
 .info{
-    width: 300px;
+    width: 50%;
     text-align: center;
     border: 1px solid #dee1e3;
 }
