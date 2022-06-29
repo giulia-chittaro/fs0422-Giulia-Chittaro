@@ -336,6 +336,8 @@ footer a {
 /*grid layout*/
 main {
     display: grid;
+    gap: 20px;
+    
 }
 
 main article {
