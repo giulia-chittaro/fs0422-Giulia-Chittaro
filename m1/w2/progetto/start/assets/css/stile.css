@@ -79,6 +79,8 @@ ul, li{
 ul{
     margin-left: 2em;
 }
+@media screen and (max-width:768px) {
+    
 #menu{
     height: 0;
     transition: all 0.3s;
@@ -86,7 +88,6 @@ ul{
     position: relative;
     width: 100%;
 }
-
 label[for="toggle"]{
     cursor: pointer;/*appare la manina*/
 }
@@ -100,15 +101,26 @@ input[type="checkbox"]:checked + #menu{
 #menu > li{
     height: 25px;
     display: block;
+    background-color:#6cc1e2;
 }
 #menu li > ul{
     display: none;
 }
-
+#menu-registrati{
+    display: none;
+}
+}
 /* MAIN */
 .container{
     padding: 2.5em 1.5em;
     text-align: center;
+}
+
+.img{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 2.5em;
 }
 #n1{
   background-image: url(../images/banner.jpg);
@@ -159,10 +171,9 @@ span{
     align-content: center;
 }   
 
-#banner .info :hover {
+.info:hover {
     animation: animazione 2s infinite;
 }
-
 @keyframes animazione {
     0% {
       transform: scale(3);
@@ -220,11 +231,15 @@ form{
 @media screen and (min-width:768px) {
     
  html{
-    font-size:75%;
+    font-size:60%;
  }
-
- .nav{
-    display: inline-block;
+#headern1{
+    display: none;
+}
+ #menu-registrati{
+    
+    display: flex;
+    flex-direction: row-reverse;
     margin: 0 0 0 1.5em;
  }
 
@@ -236,14 +251,9 @@ form{
         height: auto;
         overflow: hidden;
       }
-    #benefits{
-        display: flex;
-        justify-content: space-evenly;
-    }
     #benefits-info{
         display: flex;
         justify-content: space-evenly;
-
     }
 #notebook{
     height: 80%;
@@ -252,23 +262,28 @@ form{
  #pronostici{
     display: flex;
  }
- #contatti{
+ #contacts{
     display: flex;
+    justify-content: space-evenly;
+ }
  }
 
- .containers{
+ .container {
     margin: 0 auto;
  }
 
  .container-chisiamo{
     display: flex;
  }
+#table-chisiamo{
+    display: flex;
+    justify-content: center;
 }
 
 /* dekstop 1024 px in su */
 
 @media screen and(min-height:1179px) {
-    #n1{ justify-content: space-evenly;
+    #n1{ justify-content: space-evenly;}
         #social{
 
     margin: 100px 40px;
@@ -285,6 +300,6 @@ form{
     header nav ul li a {
         text-transform: none;
         color: #555;
-    }display: ;
+    }
 
 }

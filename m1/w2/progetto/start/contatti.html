@@ -15,22 +15,25 @@
 </head>
 <body>
   <body>
-    <header id="header-container">
-      <div id="logo"><img src="./assets/images/logo.png" alt="logo" ></div>
-      <nav id="headern1">
-          <label for="toggle"><i class="fa-solid fa-ellipsis"></i></label>
-          <input id="toggle" type="checkbox">
-          <ul id="menu">
-              <li class="nav"><a href="../start/index.html" target="_blank">Home</a></li>
-              <li class="nav"><a href="../start/chi-siamo.html" target="_blank">Chi Siamo</a></li>
-              <li class="nav"><a href="../start/contatti.html" target="_blank">Contatti</a></li>
-          </ul>
-      </nav>
+    <header>
+      <header id="header-container">
+        <div id="logo"><img src="./assets/images/logo.png" alt="logo" ></div>
+        <div id="headern1"><nav >
+            <label for="toggle"><i class="fa-solid fa-ellipsis"></i></label>
+            <input id="toggle" type="checkbox">
+            <ul id="menu">
+                <li class="nav"><a href="../start/index.html" target="_blank">Home</a></li>
+                <li class="nav"><a href="../start/chi-siamo.html" target="_blank">Chi Siamo</a></li>
+                <li class="nav"><a href="../start/contatti.html" target="_blank">Contatti</a></li>
+            </ul>
+        </nav>
+      </div>
   </header>
     <main>
+    <h1>Contatti</h1>
+    <br>
       <section id="contacts">
-        <h1>Contatti</h1>
-        <div id="contattiBox">
+        <div>
             <form id="contatti">
                <div><label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" placeholder="Nome e cognome"></div>
@@ -51,12 +54,11 @@
                   <h2>Lavora con noi</h2>
                   <p>Per poterti candidare ad un ruolo da docente invia il tuo cv a job@epicode.school</p>
               </div>
-         
         </div>
       </section>
     </main>
     <footer>
-      <section id="collegamenti">
+      <section id="info-finali">
           <div>
               <h2>Chi siamo</h2>
               <p>Epicode School nasce con l’obiettivo di rivoluzionare la formazione in ambito tech.</p>
@@ -68,11 +70,9 @@
           <div>
               <h2>Iscriviti alla nostra newsletter</h2>
               
-              <form method="POST" action="elabora-codice.php">
-                  <fieldset>
+              <form>
                       <input type="email" name="email" id="email" required>
                       <button type="submit" class="info">Va bene!</button>
-                  </fieldset>
               </form>
           </div>
       </section>
@@ -80,7 +80,6 @@
           <address>&copy; 2021 Epicode Web Developer school - Via Appia 1, 00100 Roma (RM) - Tel. 06-12345678</address>    
       </div>
     </footer>
-    
     </body>
 
 </html>
