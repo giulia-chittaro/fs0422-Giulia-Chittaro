@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=scri, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var stringa = 'prova';
+
+var html = '<div class ="test"> </div>';
+var html2 = '<div class=\"test\"> >/div>';
+var html3 = '<div class="test"> '+stringa+'</div>';
+
+console.log(html3)
+document.write(html3)
+
+//interpolazione di stringhe //
+
+var html4 = '<div class="test"> ${stringa} </div>';
+
+var separatore = "======================";
+console.log(separatore);
+
+/**************************************************************************let
+ */
+let a = 5;
+console.log(a);
+
+{
+    console.log(a)
+}
+
+ {
+    let b = 4;
+    console.log(b)
+ }
+
+ //console.log(b); errore!!! b nn esiste all'esterno del blocco!!!
+
+{
+    var c = 3;
+}
+console.log(c); //c'è una var ed ignora il blocco!!!!
+
+
+/******************************************
+ * const */
+
+ const c = 2;
+ console.log(c);
+ // c = 1 errore: non posso riassegnare il valore di una costante 
+
+ const obj = {
+    nome: ''
+    cognome: 'Barone'
+ }
+
+ obj.nome = 'Fabiola';
+
+ console.log(obj)
+
+
+
+
+
+</script>
+</body>
+</html>
