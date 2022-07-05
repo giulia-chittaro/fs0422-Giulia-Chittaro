@@ -41,9 +41,9 @@ let c = 10;
 let somma = b + c + 2;
 console.log(somma);
 
-c++;
+c++; // ++ vuol dire +1 //
 console.log(c);
-a--;
+a--; // -- vuol dire -1 //
 console.log(a);
 
 let nomePet = "Billo";
