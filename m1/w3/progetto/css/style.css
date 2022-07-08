@@ -1,0 +1,82 @@
+h1{
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 20%;
+    color: #7B002C;
+}
+#container{
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border:2px solid #FADADD;
+    overflow: hidden;  
+    
+}
+
+#calculator{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    text-align: center;   
+}
+
+#display{
+    width: 100%;
+    height:50px;
+    background-color:#FADADD;
+    color: #7B002C;
+    border-color: #FADADD;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#egual{
+    grid-column: span 3;
+    height: 70px;
+    border-radius: 2px;
+    background-color:#7B002C;
+    color:#FADADD;
+    font-family: 'Orbitron', sans-serif;
+    border-color: #FADADD ;
+}
+
+#delete{
+   width: 100px;
+    height: 70px;
+    border-radius: 2px;
+    background-color: #7B002C;
+    color:#FADADD;
+    font-family: 'Orbitron', sans-serif;
+    border-color: #FADADD;
+}
+
+.button{
+    width: 100px;
+    height: 70px;
+    border-radius: 2px;
+    background-color: #7B002C;
+    color:#FADADD;
+    font-family: 'Orbitron', sans-serif;
+    border-color: #FADADD ;
+}
+
+#egual:hover{animation-name: animazione;
+    animation-duration: 0.2s;
+}
+#delete:hover{animation-name: animazione;
+    animation-duration: 0.2s;
+}
+.button:hover{
+    animation-name: animazione;
+    animation-duration: 0.2s;
+    
+}
+
+@keyframes animazione {
+    from { background-color: #7B002C}
+    to{ background-color: #FADADD ;}    
+}

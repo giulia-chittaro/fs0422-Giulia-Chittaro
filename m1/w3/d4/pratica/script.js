@@ -10,13 +10,14 @@ console.log(lista2)
 let unione = lista1.concat(lista2)
 console.log(unione)
 
-/*
-let maiuscolo = lista1.toUppercase()
+
+let maiuscolo = lista1[2].toUpperCase()
 console.log(maiuscolo)
 
-let minuscolo = lista2.toLowercase()
+let minuscolo = lista2.toLowerCase()
 console.log(minuscolo)
-*/
+
+
 
 // punto 2 , punto 3 ,punto 4 
 

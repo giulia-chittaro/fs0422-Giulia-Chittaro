@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="Una semplice calcolatrice">
+    <title>La mia Epic-calcolatrice</title>
+    <script src="https://kit.fontawesome.com/caf6d3d73b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/reset.cs">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header><h1>La mia EPIC-calcolatrice</h1></header>
+    <main>
+    <section id="container">
+        
+        <input type="text" id="display" placeholder="0" data-simbolo = "">
+        
+        <div id="calculator">
+
+        <button class="button"  data-simbolo="7" onclick="aggiungiSimbolo(this)">7</button>
+        <button class="button" data-simbolo="8" onclick="aggiungiSimbolo(this)">8</button>
+        <button class="button"  data-simbolo="9" onclick="aggiungiSimbolo(this)">9</button>
+        <button class="button"  data-simbolo="+" onclick="aggiungiSimbolo(this)"><i class="fa-solid fa-plus"></i></button>
+        <button class="button"  data-simbolo="4" onclick="aggiungiSimbolo(this)">4</button>
+        <button class="button" data-simbolo="5" onclick="aggiungiSimbolo(this)">5</button>
+        <button class="button"  data-simbolo="6" onclick="aggiungiSimbolo(this)">6</button>
+        <button class="button" data-simbolo="-" onclick="aggiungiSimbolo(this)"><i class="fa-solid fa-minus"></i></button>
+        <button class="button"  data-simbolo="1" onclick="aggiungiSimbolo(this)">1</button>
+        <button class="button" data-simbolo="2" onclick="aggiungiSimbolo(this)">2</button>
+        <button class="button"  data-simbolo="3" onclick="aggiungiSimbolo(this)">3</button>
+        <button class="button"  data-simbolo="*" onclick="aggiungiSimbolo(this)"><i class="fa-solid fa-x"></i></button>
+         <button class="button"  data-simbolo="0" onclick="aggiungiSimbolo(this)">0</button>
+         <button class="button"  data-simbolo="00" onclick="aggiungiSimbolo(this)">.00</button>
+         <button class="button" data-simbolo="." onclick="aggiungiSimbolo(this)">.</button>
+         <button class="button"  data-simbolo="/" onclick="aggiungiSimbolo(this)"><i class="fa-solid fa-divide"></i></button>
+         <button id="egual" data-simbolo="=" onclick="calcola(this)"><i class="fa-solid fa-equals"></i></button>
+        <button data-simbolo="" id="delete" onclick="cancella()"><i class="fa-solid fa-delete-left"></i></button>
+        
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</main>
+</body>
+</html>
