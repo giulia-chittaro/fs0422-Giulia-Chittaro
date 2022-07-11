@@ -1,8 +1,11 @@
+body{
+    background-color: #7B002C;
+}
 h1{
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     margin-top: 20%;
-    color: #7B002C;
+    color: #FADADD;
 }
 #container{
     justify-content: center;
@@ -14,7 +17,8 @@ h1{
     height: 400px;
     background-color: white;
     border:2px solid #FADADD;
-    overflow: hidden;  
+    overflow: hidden; 
+    box-shadow: 1px 1px 10px 3px #FADADD;
     
 }
 
