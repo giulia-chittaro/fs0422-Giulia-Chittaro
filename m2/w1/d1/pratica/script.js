@@ -3,7 +3,7 @@ let data = new Date()
 
 // metodo 1
 
-data.toLocaleDateString()
+data;
 console.log(data)
 
 
