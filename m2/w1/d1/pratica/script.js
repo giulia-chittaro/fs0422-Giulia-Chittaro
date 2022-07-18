@@ -38,7 +38,7 @@ setInterval(function() {
  
  let clock = document.getElementById('clock')
  clock.innerHTML = time.toLocaleTimeString()   
-})
+},1000)
 
 
 
@@ -72,3 +72,8 @@ if(data.getDay() == 0){
 } else if ( data.getDay() == 6) {
     console.log('Sabato')
 } 
+
+// prove ora
+
+console.log (data.toLocaleTimeString())
+
