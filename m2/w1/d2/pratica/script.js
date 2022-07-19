@@ -3,8 +3,9 @@ i = 0
 
 while (i < 3) {
 
-    let spesa = Math.random() * 200;
-
+    let spesa = Math.random() * 200; 
+    
+    
     console.log(budget)
 
 
@@ -39,9 +40,8 @@ if(spesa > budget && i == 2 ){
   
 }
 
-    budget -= spesa;
+   budget -= spesa;
     
-
 
 }
 
