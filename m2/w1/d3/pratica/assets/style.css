@@ -1,0 +1,83 @@
+.area {
+   position: absolute;
+   top:50%;
+   left: 50%;
+   perspective: 1500px;
+
+  } 
+  
+  .cubo {
+    position: relative;
+      
+  }
+
+  .cuboAnimation{
+    animation-name: rotation;
+    transform-style: preserve-3d;
+    animation-duration: 15s;
+    animation-iteration-count: infinite; 
+    transform: rotateX(90deg) rotateY(90deg); 
+  }
+
+  .faccia {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .fronte {
+    background-image: url(./images/4.jpg); 
+    transform: translateZ(200px) translateX(-200px) translateY(-200px);
+}
+.retro  { 
+    background-image: url(./images/2.jpg);
+    transform: translateZ(-200px) translateX(-200px) translateY(-200px);
+    
+}
+  .destra  { 
+    background-image: url(./images/3.jpg);
+    transform: translateY(-200px) rotateY(90deg);
+  }
+
+ .sinistra{
+
+    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    background-image: url(./images/1.jpg)
+ } 
+  
+  .sopra   { background-color: red;
+            transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    
+}
+
+  .sotto { background-color: blue;
+            transform: translateX(-200px) rotateX(90deg);
+}
+
+  
+  #play{
+      position: relative;
+      right: -450px;
+      top: 800px;
+      background-color: green;
+  }
+  
+  
+  #stop{
+      position: relative;
+      left: 450px;
+      top: 800px;
+      background-color: red;
+  }
+  
+  
+  @keyframes rotation{
+      0% { transform: rotate3d(0,0,0,0)
+    }
+    100% { transform: rotate3d(0,1,0,360deg)
+    } 
+  }
+
+
+
+  
