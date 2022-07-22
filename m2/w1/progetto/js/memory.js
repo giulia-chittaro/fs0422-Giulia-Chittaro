@@ -8,8 +8,8 @@ let arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '�
 let arrayComparison = [];
 document.body.onload = startGame();
 
-
 var interval;
+var win = document.getElementsByClassName('find') 
 var modal = document.querySelector('#modal');
 var timer = document.querySelector('.timer');
 
@@ -73,7 +73,7 @@ function  Timer (){
       lista.removeChild(lista.firstChild);
     }
   
-     for(var i = 0; i < 16; i++){    
+     for(var i = 0; i < 24; i++){    
         var casella = document.createElement('div');
         var carta = document.createElement('div');
         carta.classList.add('carta');
@@ -105,7 +105,6 @@ function  Timer (){
 
 function displayIcon() {
 
-  var win = document.getElementsByClassName('find') 
   var carta = document.getElementsByClassName("carta");
   var carte = [...carta];
 
@@ -145,7 +144,7 @@ function displayIcon() {
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 
 function memoryFinito(){  
-    if (win.length == 16){
+    if (win.length == 24){
         clearInterval(interval);
         modal.classList.add("active");
         document.getElementById("tempoTrascorso").innerHTML = timer.innerHTML;
