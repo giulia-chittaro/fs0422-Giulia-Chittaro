@@ -110,7 +110,7 @@ function displayIcon() {
 
   this.classList.toggle("show");    //mette/toglie la classe show
   arrayComparison.push(this);       //aggiunge l'oggetto su cui ha cliccato all'array del confronto
-
+    console.log(arrayComparison)
   var len = arrayComparison.length;  //se nel confronto ci sono due elementi
  
  
@@ -120,8 +120,8 @@ function displayIcon() {
         arrayComparison[0].classList.add("find", "disabled");
         arrayComparison[1].classList.add("find", "disabled");
         arrayComparison = [];
-        };
-    } else {
+    }
+     else {
         //altrimenti (ha sbagliato) aggiunge solo la classe disabled
         carte.forEach(function(item) {
             item.classList.add('disabled');
@@ -140,6 +140,7 @@ function displayIcon() {
             }, 700);
         }
     }
+}
 
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 
@@ -161,7 +162,3 @@ function playAgain(){
         startGame();
 
   }
-
-  
-
-
