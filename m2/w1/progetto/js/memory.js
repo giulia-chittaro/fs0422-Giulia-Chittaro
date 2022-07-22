@@ -12,7 +12,7 @@ document.body.onload = startGame();
 var interval;
 var modal = document.querySelector('#modal');
 var timer = document.querySelector('.timer');
-var win = document.getElementsByClassName('find')
+
 
 
 //una funzione che serve a mescolare in modo random gli elementi dell'array che viene passato 
@@ -103,11 +103,9 @@ function  Timer (){
 
   }
 
-
-
-
 function displayIcon() {
-    
+
+  var win = document.getElementsByClassName('find') 
   var carta = document.getElementsByClassName("carta");
   var carte = [...carta];
 
@@ -144,8 +142,6 @@ function displayIcon() {
         }
     }
 
-
-    
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 
 function memoryFinito(){  
@@ -160,24 +156,13 @@ function memoryFinito(){
 
 // una funzione che nasconde la modale alla fine e riavvia il gioco
 
-  function fineMemory(){
-
-    closeicon.addEventListener("click", function(e){
-        modal.classList.remove("active")
-        startGame()
-    })
-
-  }
-  
 function playAgain(){  
-    closeicon.addEventListener("click", function(e){
+   
         modal.classList.remove("active");
         startGame();
-    });
+
   }
 
   
-
-// una funzione che calcola il tempo e aggiorna il contenitore sotto
 
 
