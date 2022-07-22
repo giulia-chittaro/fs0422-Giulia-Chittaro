@@ -5,13 +5,15 @@ let arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '�
 // mi serviranno alcune variabili 1. interval 2. una agganciata alla classe find 
 // 3. una agganciata al'id modal 4. una agganciata alla classe timer
 
-var interval;
-var modal = document.getElementById('modal');
-var timer = document.getElementsByClassName('timer');
 let arrayComparison = [];
+document.body.onload = startGame();
 
 
-document.body.onload = startGame()
+var interval;
+var modal = document.querySelector('#modal');
+var timer = document.querySelector('.timer');
+var win = document.getElementsByClassName('find')
+
 
 //una funzione che serve a mescolare in modo random gli elementi dell'array che viene passato 
 // (l'array contiene le icone degli animali)
@@ -31,7 +33,7 @@ function shuffle(a) {
 
 //funzione cronometro che parte quando inizia il gioco.
 
-function  cronometro (){
+function  Timer (){
     var s = 0, m = 0,  h = 0 ;
     interval = setInterval(function(){
     timer.innerHTML = 'Tempo: ' + m + " min " + s + " sec";
@@ -48,15 +50,25 @@ function  cronometro (){
   }
 
 
-// funzione che fa partire tutto.
+// function principale che mi permette di  :
+// una funzione che rimuove la classe active e chiama la funzione startGame()
+
+// la funzione startGame che pulisce il timer, dichiara un array vuoto, mescola casualmente l'array degli animali
+// (var arrayShuffle = shuffle(arrayAnimali);), aggancia il contenitore con id griglia, 
+// pulisce tutti gli elementi che eventualmente contiene
+// poi fa ciclo per creare i 24 div child -> aggiunge la class e l'elemento dell'array in base all'indice progressivo
+// chiama la funzione timer e associa a tutti gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
+
 
   function startGame(){  
 
     var arrayShuffle = shuffle(arrayAnimali);
 
     clearInterval(interval);
+    arrayComparison = [];
 
-    var lista = document.getElementById('griglia');
+
+    var lista = document.querySelector('#griglia');
     while (lista.hasChildNodes()) {   
       lista.removeChild(lista.firstChild);
     }
@@ -64,15 +76,15 @@ function  cronometro (){
      for(var i = 0; i < 16; i++){    
         var casella = document.createElement('div');
         var carta = document.createElement('div');
-        carta.className = 'icon';
+        carta.classList.add('carta');
        document.getElementById('griglia').appendChild(casella).appendChild(carta);
         carta.innerHTML = arrayShuffle[i];
       }
 
-     cronometro();
+     Timer();
 
-    var icon = document.getElementsByClassName("icon");
-    var icons = [...icon];
+    var carta = document.getElementsByClassName("carta");
+    var carte = [...carta];
      /*
     var icon = document.getElementsByClassName("icon");
     var icons = [...icon];
@@ -84,74 +96,80 @@ function  cronometro (){
     https://www.tutorialspoint.com/es6/es6_operators.htm (cerca spread nella pagina)
     */
   
-    for (var i = 0; i < icons.length; i++){
-      icons[i].addEventListener("click", displayIcon);
-      icons[i].addEventListener("click", modale);
+    for (var i = 0; i < carte.length; i++){
+      carte[i].addEventListener("click", displayIcon);
+      carte[i].addEventListener("click", memoryFinito);
     }
 
   }
 
-// una funzione che rimuove la classe active e chiama la funzione startGame()
-
-// la funzione startGame che pulisce il timer, dichiara un array vuoto, mescola casualmente l'array degli animali
-// (var arrayShuffle = shuffle(arrayAnimali);), aggancia il contenitore con id griglia, 
-// pulisce tutti gli elementi che eventualmente contiene
-// poi fa ciclo per creare i 24 div child -> aggiunge la class e l'elemento dell'array in base all'indice progressivo
-// chiama la funzione timer e associa a tutti gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
 
 
 
 function displayIcon() {
     
-  var iconsFind = document.getElementsByClassName("find");
+  var carta = document.getElementsByClassName("carta");
+  var carte = [...carta];
 
   this.classList.toggle("show");    //mette/toglie la classe show
   arrayComparison.push(this);       //aggiunge l'oggetto su cui ha cliccato all'array del confronto
 
-  var len = arrayComparison.length;   //se nel confronto ci sono due elementi
+  var len = arrayComparison.length;  //se nel confronto ci sono due elementi
+ 
+ 
   if (len === 2) {
     //se sono uguali aggiunge la classe find
     if (arrayComparison[0].innerHTML === arrayComparison[1].innerHTML) {
         arrayComparison[0].classList.add("find", "disabled");
         arrayComparison[1].classList.add("find", "disabled");
         arrayComparison = [];
+        };
     } else {
         //altrimenti (ha sbagliato) aggiunge solo la classe disabled
-        icons.forEach(function(item) {
+        carte.forEach(function(item) {
             item.classList.add('disabled');
         });
         // con il timeout rimuove  la classe show per nasconderli
         setTimeout(function() {
             arrayComparison[0].classList.remove("show");
-            arrayComparison[1].classList.remove("show");
-            icons.forEach(function(item) {
-                item.classList.remove('disabled');
-                for (var i = 0; i < iconsFind.length; i++) {
-                    iconsFind[i].classList.add("disabled");
-                }
-            });
-            arrayComparison = [];
-        }, 700);
+                arrayComparison[1].classList.remove("show");
+                carte.forEach(function(item) {
+                    item.classList.remove('disabled');
+                    for (var i = 0; i < win.length; i++) {
+                        win[i].classList.add("disabled");
+                    }
+                });
+                arrayComparison = [];
+            }, 700);
+        }
     }
-}
-}
+
 
     
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 
-function modale(){  
-    if (iconsFind.length == 16){
+function memoryFinito(){  
+    if (win.length == 16){
         clearInterval(interval);
         modal.classList.add("active");
         document.getElementById("tempoTrascorso").innerHTML = timer.innerHTML;
-        modaleNo();
+        fineMemory();
     }
   }
-  
+
 
 // una funzione che nasconde la modale alla fine e riavvia il gioco
 
-function mondaleNo(){  
+  function fineMemory(){
+
+    closeicon.addEventListener("click", function(e){
+        modal.classList.remove("active")
+        startGame()
+    })
+
+  }
+  
+function playAgain(){  
     closeicon.addEventListener("click", function(e){
         modal.classList.remove("active");
         startGame();
