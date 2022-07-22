@@ -149,7 +149,6 @@ function memoryFinito(){
         clearInterval(interval);
         modal.classList.add("active");
         document.getElementById("tempoTrascorso").innerHTML = timer.innerHTML;
-        fineMemory();
     }
   }
 
