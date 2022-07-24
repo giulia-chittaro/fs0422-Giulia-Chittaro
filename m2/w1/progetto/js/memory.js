@@ -69,37 +69,25 @@ function  Timer (){
 
 
     var lista = document.querySelector('#griglia');
-    while (lista.hasChildNodes()) {   
-      lista.removeChild(lista.firstChild);
-    }
+    lista.innerHTML = ""
   
      for(var i = 0; i < 24; i++){    
+
         var casella = document.createElement('div');
         var carta = document.createElement('div');
         carta.classList.add('carta');
-       document.getElementById('griglia').appendChild(casella).appendChild(carta);
+        document.getElementById('griglia').appendChild(casella).appendChild(carta);
+
         carta.innerHTML = arrayShuffle[i];
+
+        var carta = document.getElementsByClassName("carta");
+        var carte = [...carta];
+        carte[i].addEventListener("click", displayIcon);
+        carte[i].addEventListener("click", memoryFinito);
+        
       }
 
      Timer();
-
-    var carta = document.getElementsByClassName("carta");
-    var carte = [...carta];
-     /*
-    var icon = document.getElementsByClassName("icon");
-    var icons = [...icon];
-    è uguale a 
-    var icons = document.getElementsByClassName("icon");
-    //var icons = [...icon];
-    è un operatore che serve per passare un array come argomento:
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
-    https://www.tutorialspoint.com/es6/es6_operators.htm (cerca spread nella pagina)
-    */
-  
-    for (var i = 0; i < carte.length; i++){
-      carte[i].addEventListener("click", displayIcon);
-      carte[i].addEventListener("click", memoryFinito);
-    }
 
   }
 

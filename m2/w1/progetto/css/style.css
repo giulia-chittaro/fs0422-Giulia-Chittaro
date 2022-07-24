@@ -20,13 +20,6 @@ justify-content: center;
 flex-wrap: wrap;
 }
 
-.show {
-/* visibilità e opacità */
-
-visibility: visible;
-opacity: 1;
-}
-
 #griglia>div {
     /* dimensioni e margini */
     margin: 40px 20px;
@@ -66,6 +59,8 @@ opacity: 1;
     border: 1px solid #3889c4;
     border-radius: 10px;
     animation-name: rotazione-carta ;
+    visibility: visible;
+    opacity: 1;
 }
 
 .find {
