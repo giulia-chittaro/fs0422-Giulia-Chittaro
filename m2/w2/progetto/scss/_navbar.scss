@@ -1,0 +1,26 @@
+
+.navbar-brand img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.navbar{
+
+    background-color: #40a8b6;
+    height: 100px;
+}
+
+.dropdown-menu{
+
+    background-color:  #40a8b6;
+}
+
+#navbarNavDropdown ul a {
+    color : $font-color;
+}
+
+.navbar-nav li a {
+    font-family: $font;
+    @include Font;
+}
