@@ -40,7 +40,7 @@ body{
 
 #description span {
     font-weight: bold;
-    color: #0d7482;
+    color:lightness($color: #0d7482) ;
     
 }
 
@@ -49,3 +49,4 @@ hr{
     margin: 100px 50px;
     
 }
+

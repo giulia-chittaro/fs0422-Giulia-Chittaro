@@ -17,7 +17,7 @@
 }
 
 #navbarNavDropdown ul a {
-    color : $font-color;
+    color : lightness($color: $font-color) ;
 }
 
 .navbar-nav li a {
