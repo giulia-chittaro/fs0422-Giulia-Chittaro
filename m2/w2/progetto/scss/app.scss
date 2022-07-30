@@ -2,6 +2,7 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'navbar';
 @import 'slider';
+@import 'function';
 
 
 
@@ -44,9 +45,12 @@ body{
     
 }
 
-hr{
-    border: 5px solid white;
-    margin: 100px 50px;
-    
+.img-partner{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.img-events{
+    width: 50%;
 }
 

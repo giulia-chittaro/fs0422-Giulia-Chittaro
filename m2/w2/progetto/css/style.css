@@ -10694,12 +10694,12 @@ textarea.form-control-lg {
 
 /* line 19, scss/_navbar.scss */
 #navbarNavDropdown ul a {
-  color: white; }
+  color: 100%; }
 
 /* line 23, scss/_navbar.scss */
 .navbar-nav li a {
   font-family: "Merriweather", serif;
-  color: white;
+  color: 100%;
   font-size: 1.2rem;
   font-family: "Merriweather", serif; }
 
@@ -10707,19 +10707,19 @@ textarea.form-control-lg {
 .card-body p {
   font-family: 'Merriweather', serif; }
 
-/* line 8, scss/app.scss */
+/* line 9, scss/app.scss */
 body {
   background-image: linear-gradient(#b6e3ee, #40a8b6);
   background-size: cover;
   height: 100%; }
 
-/* line 15, scss/app.scss */
+/* line 16, scss/app.scss */
 #img_principal {
   border-radius: 10px;
   width: 100%;
   box-shadow: 0 0 30px white; }
 
-/* line 23, scss/app.scss */
+/* line 24, scss/app.scss */
 #text-principal {
   font-family: "Merriweather", serif;
   color: white;
@@ -10727,21 +10727,25 @@ body {
   text-shadow: 5px 5px 5px #CCC;
   font-size: 2rem; }
 
-/* line 34, scss/app.scss */
+/* line 35, scss/app.scss */
 #description {
-  color: white;
+  color: 100%;
   font-size: 1.2rem;
   font-family: "Merriweather", serif;
   text-align: justify;
   line-height: 1.5;
   font-family: "Merriweather", serif; }
 
-/* line 41, scss/app.scss */
+/* line 42, scss/app.scss */
 #description span {
   font-weight: bold;
-  color: #0d7482; }
+  color: 28.03922%; }
 
-/* line 47, scss/app.scss */
-hr {
-  border: 5px solid white;
-  margin: 100px 50px; }
+/* line 48, scss/app.scss */
+.img-partner {
+  width: 50%;
+  border-radius: 20px; }
+
+/* line 53, scss/app.scss */
+.img-events {
+  width: 50%; }
