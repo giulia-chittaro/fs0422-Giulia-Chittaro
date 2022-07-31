@@ -13,6 +13,12 @@ body{
     height: 100%;
 }
 
+hr{
+    border: 2px double white;
+    opacity: 0.25;
+    margin: 5% 10%;
+}
+
 #img_principal{
 
     border-radius: 10px;
@@ -37,6 +43,20 @@ body{
     text-align: justify;
     line-height: 1.5;
     font-family: $font;
+}
+
+#button{
+    border-radius: 5%;
+    border: 1px solid white;
+    width: 150px;
+    height: 50px;
+    background-color: #b6e3ee;
+    line-height: 50px;
+}
+
+#button a{
+    text-decoration: none;
+    @include Font;
 }
 
 #description span {
