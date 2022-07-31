@@ -1,4 +1,4 @@
-@function cambio-testo($colore){
+@function changeColor($colore){
 
     @if(lightness($colore) < 50){
         @return black;

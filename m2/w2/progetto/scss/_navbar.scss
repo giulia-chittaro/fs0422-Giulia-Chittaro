@@ -1,7 +1,7 @@
 
 .navbar-brand img{
-    height: 70px;
-    width: 70px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
 
@@ -17,10 +17,11 @@
 }
 
 #navbarNavDropdown ul a {
-    color : lightness($color: $font-color) ;
+    color : changeColor($bgColor-1) ;
 }
 
 .navbar-nav li a {
     font-family: $font;
     @include Font;
+    color : changeColor($bgColor-1) ;
 }

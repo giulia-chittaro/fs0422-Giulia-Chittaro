@@ -30,12 +30,16 @@ hr{
 
 #title-events{
     @include Font;
+    color: white;
     margin-bottom: 50px;
     text-shadow: $text-shadow;
+    
 }
+
 
 #title-collaborations{
     @include Font;
+    color: white;
     margin-bottom: 50px;
     text-shadow: $text-shadow;
 }
@@ -61,6 +65,7 @@ hr{
 
 #description{
     @include Font;
+    color: white;
     text-align: justify;
     line-height: 1.5;
     font-family: $font;
@@ -78,12 +83,7 @@ hr{
 #button a{
     text-decoration: none;
     @include Font;
-}
-
-#description span {
-    font-weight: bold;
-    color:lightness($color: #0d7482) ;
-    
+    color: white;
 }
 
 .img-partner{
@@ -96,7 +96,7 @@ hr{
 }
 
 #clockdiv{
-	font-family: sans-serif;
+	font-family: $font;
 	color: #fff;
 	display: inline-block;
 	font-weight: 100;
@@ -105,19 +105,18 @@ hr{
 }
 
 #clockdiv > div{
-	padding: 10px;
+	
 	border-radius: 3px;
 	display: inline-block;
 }
 
 #clockdiv div > span{
-	padding: 15px;
 	border-radius: 3px;
 	display: inline-block;
+    
 }
 
 .smalltext{
-	padding-top: 5px;
 	font-size: 16px;
 }
 
