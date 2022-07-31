@@ -1,9 +1,12 @@
 $font-color : white;
 $font : 'Merriweather', serif;
 $font-secondary : 1.2rem;
+$text-shadow : 5px 5px 5px #CCC;
 
 @mixin Font {
     color: $font-color;
     font-size: $font-secondary;
     font-family: $font;
 }
+
+

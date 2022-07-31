@@ -1,8 +1,10 @@
-@function contrast($colore){
+@function cambio-testo($colore){
 
-    @if(lightness($colore) > 50){
-        @return darken($colore,25%);
+    @if(lightness($colore) < 50){
+        @return black;
     }@else{
-        @return lighten($colore,25%)
+        @return white;
     }
 }
+
+

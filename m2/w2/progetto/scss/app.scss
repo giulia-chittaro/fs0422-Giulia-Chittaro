@@ -19,6 +19,27 @@ hr{
     margin: 5% 10%;
 }
 
+#title-aboutus{
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Merriweather', serif;
+    text-shadow: $text-shadow;
+    
+}
+
+#title-events{
+    @include Font;
+    margin-bottom: 50px;
+    text-shadow: $text-shadow;
+}
+
+#title-collaborations{
+    @include Font;
+    margin-bottom: 50px;
+    text-shadow: $text-shadow;
+}
+
 #img_principal{
 
     border-radius: 10px;
@@ -66,11 +87,37 @@ hr{
 }
 
 .img-partner{
-    width: 50%;
+    width: 40%;
     border-radius: 20px;
 }
 
 .img-events{
-    width: 50%;
+    width: 60%;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
 }
 
