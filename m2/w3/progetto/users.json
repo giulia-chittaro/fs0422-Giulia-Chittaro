@@ -1,6 +1,6 @@
 [
   {
-    "username": "john",
+    "username": "John",
     "firstName": "John",
     "lastName": "Doe",
     "gender": "Male",
@@ -8,7 +8,7 @@
     "email": "john.doe@example.com"
   },
   {
-    "username": "jane",
+    "username": "Jane",
     "firstName": "Jane",
     "lastName": "Doe",
     "gender": "Female",
