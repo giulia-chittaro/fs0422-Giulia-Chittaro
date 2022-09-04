@@ -1,0 +1,32 @@
+body{
+    background-image: url('../images/smartphone-and-life.jpg');
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+#smartphone{
+
+    width: 400px;
+    height: 600px;
+    background-color: rgb(89, 215, 237);
+    border-radius: 5px;
+    margin: 250px 785px 0 790px;
+}
+
+#toolbar, #instruments{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#clock, #widget{
+    width: 40px;
+    margin: 5px 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-solid{
+    margin: 0 3px;
+}
