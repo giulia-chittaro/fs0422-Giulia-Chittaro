@@ -1,28 +1,16 @@
-<h1>My Todo List</h1>
 
-<div class="container">
+<app-create></app-create>
+<router-outlet></router-outlet>
 
-<div class="left">
-
-    <form id="form">
-        
-        <textarea [(ngModel)]="newTodo.title" name="post" placeholder="What should I do?" id="input" cols="30" rows="10"></textarea>
-        <input [(ngModel)]="newTodo.completed" type="checkbox" name="completed">
-        <button (click)="addtodo()" type="submit" id="submit">Submit</button>
-
-      </form>
-
-</div>
-
-<div class="right">
 <div *ngIf = "allTodo.length == 0" >Loading...</div>
 
-    <h3>Todo List</h3>
     <ng-container *ngFor = "let todo of allTodo" id="list">
-   <div>
-        <h3>{{todo.title}}</h3>
-        <input [(ngModel)]="todo.completed" type="checkbox" name="completed">
-    </div>
+   
+    <p (click)="completa(todo)">{{todo.title}}</p>
+    <button (click)="elimina(todo)">Delete</button>
+    <button [routerLink]="['update', todo.id]">Edit</button>    
+    
 </ng-container>
 
-</div>
+
+

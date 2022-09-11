@@ -10,7 +10,6 @@ export class TodoService {
 
   apiUrl : string = 'http://localhost:3000/todo'
 
-  allTodo : Todo[] = [];
 
   getallTodo() : Promise<Todo[]> {
     return new Promise<Todo[]>((resolve, reject) => {
@@ -21,36 +20,52 @@ export class TodoService {
   })
   }
 
-  addTodo(todo : Todo) : Promise <Todo[]>{
-    return new Promise((resolve, reject) => {
-      setTimeout(() =>{
+  addTodo(todo : Todo) : void{
+    fetch(this.apiUrl, {
+      method: 'POST',
+      body: JSON.stringify(todo),
+      headers:{
+        "content-type":"application/json"
+    }
+    })
+    .then(res => res.json())
+}
 
-    let todoCreate = Object.assign({},todo)
+deleteTodo(todo : Todo): void {
+  fetch(this.apiUrl+'/'+todo.id,{
+    method: 'DELETE',
+    body: JSON.stringify(todo),
+    headers:{
+        "content-type":"application/json"
+    }})
+    .then(res => res.json())
+}
 
-    let option = {
-      method : 'POST',
-      body : JSON.stringify(todoCreate),
-      headers : {'content-type': 'application/json'},
-    };
-    resolve(fetch('apiUrl', option).then((res) => res.json()))
-  },2000)
+
+editTodo(todo : Todo):void { 
+
+  fetch(this.apiUrl+'/'+todo.id,{
+    method: 'PATCH',
+    body: JSON.stringify(todo),
+    headers:{
+        "content-type":"application/json"
+    }
 })
+  .then(res => res.json())
 }
 
-deleteTodo(id:number| undefined):Promise<Todo[]> {
-  return new Promise((resolve, reject) => {
-    setTimeout(() =>{
-      let option = {
-        method: 'DELETE',
-        headers: {
-          'content-type': 'application/json',
-        },
-      };
-
-      resolve(fetch('apiUrl'+id, option).then((res) => res.json()))
-    },2000)
-  })
+completedTodo(todo:Todo):void{
+  fetch(this.apiUrl+'/'+todo.id,{
+  method: 'PUT',
+  body: JSON.stringify(todo),
+  headers:{
+      "content-type":"application/json"
+  }})
+  .then(res => res.json())
 }
+
+
+
 
   }
 
