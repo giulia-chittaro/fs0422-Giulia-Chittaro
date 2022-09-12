@@ -16,16 +16,32 @@ export class TodoComponent implements OnInit {
     { }
     
     allTodo : Todo[] = [];
+    newTodo : Todo = new Todo ('');
 
   ngOnInit(): void {
+    this.getallTodo();
+    
+  }
+
+  getallTodo(): void {
     this.todoSvc.getallTodo()
     .then(res => {
       this.allTodo = res
     })
   }
 
+  aggiungi(){
+    this.todoSvc.addTodo(this.newTodo)
+    setTimeout(() => {
+      this.getallTodo();
+    },100)
+  }
+
   elimina(todo : Todo){
     this.todoSvc.deleteTodo(todo)
+    setTimeout(() => {
+      this.getallTodo();
+    },100)
   }
   
   completa(todo : Todo){

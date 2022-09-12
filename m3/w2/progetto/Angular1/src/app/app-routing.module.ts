@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CompletedComponent } from './pages/completed/completed.component';
 import { TodoComponent } from './pages/todo/todo.component';
-import { UpdateComponent } from './pages/todo/update/update.component';
+
 
 const routes: Routes = [
   {
@@ -13,10 +13,7 @@ const routes: Routes = [
   path: 'completed',
   component : CompletedComponent,
 },
-{
-  path: 'update/:id',
-  component : UpdateComponent
-},
+
 
 ];
 

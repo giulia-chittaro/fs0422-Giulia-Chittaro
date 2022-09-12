@@ -1,24 +1,19 @@
 {
   "todo": [
     {
-      "title": "cambia le gomme",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "title": "FAI LA SPESA",
-      "completed": false,
-      "id": 5
-    },
-    {
       "title": "COMPRA I POMODORI",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
-      "title": "ciao",
-      "completed": false,
+      "title": "CAMBIA LE RUOTE ",
+      "completed": true,
       "id": 7
+    },
+    {
+      "title": "LAVA LA MACCHINA",
+      "completed": false,
+      "id": 8
     }
   ]
 }

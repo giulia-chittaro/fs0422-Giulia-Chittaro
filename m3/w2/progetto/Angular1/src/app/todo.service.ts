@@ -5,6 +5,9 @@ import { Todo } from './todo';
   providedIn: 'root'
 })
 export class TodoService {
+  edit(editodo: Todo) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 
@@ -39,19 +42,6 @@ deleteTodo(todo : Todo): void {
         "content-type":"application/json"
     }})
     .then(res => res.json())
-}
-
-
-editTodo(todo : Todo):void { 
-
-  fetch(this.apiUrl+'/'+todo.id,{
-    method: 'PATCH',
-    body: JSON.stringify(todo),
-    headers:{
-        "content-type":"application/json"
-    }
-})
-  .then(res => res.json())
 }
 
 completedTodo(todo:Todo):void{

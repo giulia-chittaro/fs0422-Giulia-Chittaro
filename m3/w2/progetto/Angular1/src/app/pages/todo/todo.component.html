@@ -1,16 +1,31 @@
-
-<app-create></app-create>
 <router-outlet></router-outlet>
+<div id="container-todo">
+
+
+<div id="left">
+
+    <input [(ngModel)]="newTodo.title" type="text" name="post" placeholder="What should I do?" id="title">
+    <button (click)="aggiungi()"  type="submit" id="submit"  class="btn">Add</button>
+
+</div>
+
+<div id="right">
 
 <div *ngIf = "allTodo.length == 0" >Loading...</div>
 
     <ng-container *ngFor = "let todo of allTodo" id="list">
-   
-    <p (click)="completa(todo)">{{todo.title}}</p>
-    <button (click)="elimina(todo)">Delete</button>
-    <button [routerLink]="['update', todo.id]">Edit</button>    
+
+        <!-- <p *ngIf="todo.completed == true" ng-show="isHidden">{{todo.title}}</p> facendo così mi fa scomparire gli altri elementi e non quelli corretti!!
+    -->
+    <p >{{todo.title}}</p>
+
+    <button (click)="elimina(todo)" class="btn">Delete</button>
+    <button (click)="completa(todo)" [ngStyle]="{'color': 'green'}" class="btn">Completed</button>
+     
     
 </ng-container>
 
 
+</div>
 
+</div>
