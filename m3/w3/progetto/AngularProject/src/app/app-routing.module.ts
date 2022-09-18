@@ -4,9 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NewPostComponent } from './pages/posts/new-post/new-post.component';
 import { PostsComponent } from './pages/posts/posts.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { NewUserComponent } from './pages/users/new-user/new-user.component';
 import { UsersComponent } from './pages/users/users.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -15,11 +15,12 @@ const routes: Routes = [
   },
   {
     path:'dashboard',
-    component : DashboardComponent
+    component : DashboardComponent,
+    
   },
   {
     path:'signIn',
-    component : NewUserComponent
+    component : RegisterComponent
   },
   {
     path : 'newPost',
@@ -31,12 +32,9 @@ const routes: Routes = [
   },
   {
     path:'users',
-    component : UsersComponent
-  },
-  {
-    path:'profile',
-    component : ProfileComponent
-  },
+    component : UsersComponent,
+    canActivate: [AuthGuard]
+  }
 ];
 
 @NgModule({

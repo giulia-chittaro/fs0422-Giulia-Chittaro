@@ -11,5 +11,22 @@
       "id": 2
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "chittaro.giulia@gmail.com",
+      "password": "$2a$10$0PX3SLkNDhpnDRh5WX1T7.lFrJjbkHEBRE/ZXatvdz8RNqXLiQ1rC",
+      "id": 1
+    },
+    {
+      "email": "giulia@giulia.it",
+      "password": "$2a$10$Is39McM8p1LrwJBxdT2DoOHBz.sSgTAbm8rcnvUK4E4HmM0fBqWU2",
+      "id": 2
+    },
+    {
+      "email": "alice@alice.it",
+      "password": "$2a$10$I9EJH6VS.4wMHFBk3cFPju13PBZQNnG2/p3ol4JLHhjDtGmHRZzza",
+      "name": "alice",
+      "id": 3
+    }
+  ]
 }
