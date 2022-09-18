@@ -1,1 +1,23 @@
-<p>users works!</p>
+<nz-layout>
+<nz-header><app-with-an-icon></app-with-an-icon></nz-header>
+<nz-content>
+<ng-container *ngFor = "let user of users" id="list">
+
+    <div>
+    
+    <p>{{user.name}}</p>
+    <p>{{user.email}}</p>
+    
+    
+</div>
+
+<div>
+<button (click)="deleteUser(user)" class="btn">Delete</button>
+<button (click)="editUser()" class="btn">Edit</button>
+</div>
+
+</ng-container>
+</nz-content>
+
+<nz-footer></nz-footer>
+</nz-layout>

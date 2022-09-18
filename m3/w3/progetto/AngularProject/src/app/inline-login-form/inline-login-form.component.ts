@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-inline-login-form',
@@ -7,12 +9,8 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 })
 export class InlineLoginFormComponent implements OnInit {
   validateForm!: UntypedFormGroup;
-
-  submitForm(): void {
-    console.log('submit', this.validateForm.value);
-  }
-
-  constructor(private fb: UntypedFormBuilder) {}
+ 
+  constructor(private fb: UntypedFormBuilder, private router: Router ) {}
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
@@ -21,4 +19,19 @@ export class InlineLoginFormComponent implements OnInit {
       remember: [true]
     });
   }
+
+  submitForm(): void {
+   
+    this.router.navigate(['/dashboard'])
+  }
+
+  signIn() : void {
+
+    this.router.navigate(['/signIn'])
+
+  }
+
+  
+  
+
 }

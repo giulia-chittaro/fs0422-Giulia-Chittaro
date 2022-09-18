@@ -1,1 +1,25 @@
-<p>posts works!</p>
+<nz-layout>
+<nz-header>
+<app-with-an-icon></app-with-an-icon></nz-header>
+
+<nz-content>
+<ng-container *ngFor = "let post of posts" id="list">
+
+    <div>
+
+    <p>{{post.title}}</p>
+    <p>{{post.content}}</p>
+
+</div>
+
+<div>
+<button (click)="deletePost(post)" class="btn">Delete</button>
+<button (click)="editPost()" class="btn">Edit</button>
+</div>
+
+</ng-container>
+
+<button (click)="create()">Create a new Post</button>
+</nz-content>
+
+</nz-layout>

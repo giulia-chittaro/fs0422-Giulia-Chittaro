@@ -16,8 +16,10 @@
       </nz-form-item>
       <nz-form-item>
         <nz-form-control>
-          <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button>
+          <button (ngSubmit)="submitForm()" nz-button nzType="primary" [disabled]="!validateForm.valid" >Log in</button>
         </nz-form-control>
       </nz-form-item>
     </form>
   
+    <p>Not registered?</p>
+    <button (click)="signIn()">Sign In!</button>

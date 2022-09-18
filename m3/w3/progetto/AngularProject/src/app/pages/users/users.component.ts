@@ -20,12 +20,7 @@ export class UsersComponent implements OnInit {
     this.usersSvc.getAllUsers().subscribe(users => this.users = users)
   }
 
-  saveUser(){
-    this.usersSvc.addUsers(this.user).subscribe(res => {
-      this.users.push(res)
-      this.user = new Users('','')
-    })
-  }
+  
   editUser(){
     this.usersSvc.editUsers(this.user).subscribe(res => {
       let index = this.users.findIndex(p => p.id === this.user.id)

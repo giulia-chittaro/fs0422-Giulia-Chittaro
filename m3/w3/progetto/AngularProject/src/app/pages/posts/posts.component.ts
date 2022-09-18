@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Posts } from 'src/app/posts';
 import { PostsService } from 'src/app/posts.service';
 
@@ -13,20 +14,13 @@ export class PostsComponent implements OnInit {
   posts:Posts [] = [];
   formAction: string | undefined; 
 
-  constructor(private postsSvc: PostsService) { }
+  constructor(private postsSvc: PostsService, private router: Router) { }
 
   ngOnInit(): void {
 
     this.postsSvc.getAllPosts().subscribe(posts => this.posts = posts)
   }
-
-  savePost(){
-    this.postsSvc.addPosts(this.post).subscribe(res => {
-      this.posts.push(res)
-      this.post = new Posts('','')
-    })
-  }
-
+  
   editPost(){
     this.postsSvc.editPosts(this.post).subscribe(res => {
       let index = this.posts.findIndex(p => p.id === this.post.id)
@@ -40,6 +34,10 @@ export class PostsComponent implements OnInit {
       let index = this.posts.findIndex(p => p.id === post.id)
       this.posts.splice(index,1)
     })
+  }
+
+  create(): void{
+    this.router.navigate(['/newPost']);
   }
 
 }

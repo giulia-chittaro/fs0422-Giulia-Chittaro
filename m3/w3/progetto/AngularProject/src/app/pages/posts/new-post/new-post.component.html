@@ -1,0 +1,17 @@
+<nz-layout>
+<nz-header><h1>Create Post</h1></nz-header>
+
+<nz-content>
+<form action="">
+
+    <input type="text" class="input" nz-input [(ngModel)]="post.title" name="title" placeholder="write..." />
+    <textarea class="input" nz-input [(ngModel)]="post.content" name="content" placeholder="write..."></textarea>
+
+    <button (click)="savePost()">Create!</button>
+    <button (click)="comebackhome()">Come back!</button>
+  
+</form>
+</nz-content>
+<nz-footer></nz-footer>
+<nz-footer></nz-footer>
+</nz-layout>
