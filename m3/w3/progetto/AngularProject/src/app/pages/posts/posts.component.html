@@ -1,11 +1,9 @@
-<nz-layout>
-<nz-header>
-<app-with-an-icon></app-with-an-icon></nz-header>
+<app-with-an-icon></app-with-an-icon>
 
-<nz-content>
+<div id="container">
 <ng-container *ngFor = "let post of posts" id="list">
 
-    <div>
+    <div id="post">
 
     <p>{{post.title}}</p>
     <p>{{post.content}}</p>
@@ -19,7 +17,8 @@
 
 </ng-container>
 
-<button (click)="create()">Create a new Post</button>
-</nz-content>
+</div>
 
-</nz-layout>
+<div id="container-btn">
+<button (click)="create()" class="btn">Create a new Post</button>
+</div>

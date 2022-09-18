@@ -1,21 +1,17 @@
-<nz-layout>
-<nz-header>    
+  
 <app-with-an-icon></app-with-an-icon>
-</nz-header>
-<nz-content>
+
 
 <h1>Welcome Back</h1>
-
-<div>
-    <button (click)="Logout()">Logout!</button>
+<div id="container">
+<div id="logout" >
+    <button (click)="Logout()" class="btn">Logout!</button>
 </div>
 
-<div>
+<div  id="container-btn">
 
-    <button (click)="goToUsers()">Go to Users</button>
-    <button (click)="goToPosts()">Go to Posts</button>
+    <button (click)="goToUsers()" class="btn">Go to Users</button>
+    <button (click)="goToPosts()" class="btn">Go to Posts</button>
 
 </div>
-</nz-content>
-<nz-footer></nz-footer>
-</nz-layout>
+</div>

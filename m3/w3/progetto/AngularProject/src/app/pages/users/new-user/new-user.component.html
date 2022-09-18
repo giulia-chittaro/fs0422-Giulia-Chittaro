@@ -1,7 +1,7 @@
-<nz-layout>
 
-  <nz-header><h1>Sign In</h1></nz-header>
-  <nz-content>
+
+ <h1>Sign In</h1>
+  <div id="container">
 <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
     <nz-form-item>
       <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
@@ -46,11 +46,12 @@
         <input nz-input id="name" formControlName="name" />
       </nz-form-control>
     </nz-form-item>
-    <button (click)="saveUser()">Register!</button>
+   
   </form>   
 
-    <button (click)="Comeback()">Come Back to Dashboard</button>
-</nz-content>
-<nz-footer></nz-footer>
-  </nz-layout>
+  <div id="container-btn">
+    <button (click)="saveUser()" class="btn">Register!</button>
+    <button (click)="Comeback()" class="btn">Come Back to Dashboard</button></div>
+
+</div>
  

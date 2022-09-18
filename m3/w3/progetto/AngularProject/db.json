@@ -1,4 +1,15 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "title": "Il mondo attraverso",
+      "content": "Storie di viaggi in Italia",
+      "id": 1
+    },
+    {
+      "title": "Freeda",
+      "content": "Testimonianze",
+      "id": 2
+    }
+  ],
   "users": []
 }

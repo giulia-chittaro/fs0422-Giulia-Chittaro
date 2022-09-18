@@ -1,17 +1,16 @@
-<nz-layout>
-<nz-header><h1>Create Post</h1></nz-header>
+<h1>Create Post</h1>
 
-<nz-content>
-<form action="">
 
-    <input type="text" class="input" nz-input [(ngModel)]="post.title" name="title" placeholder="write..." />
-    <textarea class="input" nz-input [(ngModel)]="post.content" name="content" placeholder="write..."></textarea>
+<div id="container">
+    <form action="">
 
-    <button (click)="savePost()">Create!</button>
-    <button (click)="comebackhome()">Come back!</button>
-  
-</form>
-</nz-content>
-<nz-footer></nz-footer>
-<nz-footer></nz-footer>
-</nz-layout>
+        <input type="text" class="input" nz-input [(ngModel)]="post.title" name="title" placeholder="write..." />
+        <textarea class="input" nz-input [(ngModel)]="post.content" name="content" placeholder="write..."></textarea>
+
+    </form>
+
+    <div id="container-btn">
+        <button (click)="savePost()" class="btn">Create!</button>
+        <button (click)="comebackhome()" class="btn">Come back!</button>
+    </div>
+</div>
