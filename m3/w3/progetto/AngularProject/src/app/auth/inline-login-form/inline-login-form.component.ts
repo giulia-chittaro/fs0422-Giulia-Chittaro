@@ -24,8 +24,8 @@ export class InlineLoginFormComponent implements OnInit {
   }
 
   loginData:Login = {
-    email:'luqujer@mailinator.com',
-    password:'Pa$$w0rd!',
+    email:'',
+    password:'',
   }
 
   submitForm(): void {
