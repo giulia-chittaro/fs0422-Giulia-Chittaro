@@ -52,25 +52,29 @@ public class Filmato extends Multimedia implements Luminosita , Volume {
 	@Override
 	public void aumentaluminosita(int alza) {
 		
-		this.luminosita = alza;
+		   if (alza > this.luminosita) this.luminosita = alza;
+	        else System.out.println("valore inserito maggiore o uguale");
 		
 	}
 
 	@Override
 	public void diminuisciluminosita(int abbassa) {
 		
-		this.luminosita = abbassa;
+		  if (abbassa < this.luminosita) this.luminosita = abbassa;
+	        else System.out.println("valore inserito minore o uguale");
 	}
 	
 	@Override
-	public void abbassavolume(int volume) {
-	
-		  this.volume = volume;
+	public void abbassavolume(int meno) {
+		
+		 if (meno < this.volume) this.volume = meno;
+	        else System.out.println("valore inserito minore o uguale");
 	}
 
 	@Override
-	public void alzavolume(int volume) {
-		this.volume = volume;
+	public void alzavolume(int aumenta) {
+		 if (aumenta > this.volume) this.volume = aumenta;
+	        else System.out.println("valore inserito maggiore o uguale");
 	}
 
 }

@@ -30,7 +30,7 @@ public class Audio extends Multimedia implements Volume{
 	            abbassavolume(volume);
 	    }
 
-	    public void play() {
+	    public String play() {
 	        String esclamativo = "";
 	        String durata = "";
 	        for (int a = 0; a < this.volume; a++) {
@@ -39,19 +39,22 @@ public class Audio extends Multimedia implements Volume{
 	        for (int a = 0; a < this.durata; a++) {
 	            durata += getTitolo();
 	        }
-	        System.out.println(durata + " " + esclamativo);
+	        return durata + " " + esclamativo;
 	    }
 
 
 	@Override
 	public void abbassavolume(int meno) {
 	
-		  this.volume = meno;
+		  if (meno < this.volume) this.volume = meno;
+	        else System.out.println("valore inserito minore o uguale");
 	}
 
 	@Override
 	public void alzavolume(int aumenta) {
-		this.volume = aumenta;
+
+		   if (aumenta > this.volume) this.volume = aumenta;
+	        else System.out.println("valore inserito maggiore o uguale");
 	}
 
 }

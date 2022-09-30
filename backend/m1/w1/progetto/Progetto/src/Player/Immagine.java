@@ -33,15 +33,15 @@ public class Immagine extends Multimedia implements Luminosita{
     }
     
     @Override
-    public void aumentaluminosita(int luminositapiù) {
-        if (luminosita > this.luminosita) this.luminosita = luminositapiù;
-        else System.out.println("valore inserito inferiore o uguale");
+    public void aumentaluminosita(int alza) {
+        if (alza > this.luminosita) this.luminosita = alza;
+        else System.out.println("valore inserito maggiore o uguale");
     }
 
     @Override
-    public void diminuisciluminosita(int luminositameno) {
-        if (luminosita < this.luminosita) this.luminosita = luminositameno;
-        else System.out.println("valore inserito superiore o uguale");
+    public void diminuisciluminosita(int abbassa) {
+        if (abbassa < this.luminosita) this.luminosita = abbassa;
+        else System.out.println("valore inserito minore o uguale");
     }
 
 
