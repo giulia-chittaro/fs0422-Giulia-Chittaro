@@ -66,8 +66,7 @@ public class ExerciseW2 {
 						int ranno = s.nextInt();
 						System.out.println("Inserisci numero pagine : ");
 						int rpagine = s.nextInt();
-						System.out.println("Inserisci periodicità : ");
-						//Periodicita periodicita = 
+				
 						continue;
 					
 					}
@@ -123,19 +122,22 @@ public class ExerciseW2 {
 		
 	}
 
-	private static searchByAutore(ArrayList<Libri> libro, String author) {
-		
-		return (ArrayList<Libri>) libro.stream().filter( l -> autore.equals(l.autore)).collect(null);
+	static ArrayList<Editoriale> searchByIsbn(ArrayList<Editoriale> c, long isbn){
+		return (ArrayList<Editoriale>) c.stream()
+				.filter(b -> b.codiceISBN == isbn)
+				.collect(Collectors.toList());
 	}
-
-	private static searchByAnno(Collection<Editoriale> c, int year) {
-		
-		return null;
+	
+	static ArrayList<Editoriale> searchByAnno(ArrayList<Editoriale> catalogue, int year){
+		return (ArrayList<Editoriale>) catalogue.stream()
+				.filter(b -> b.annoPubblicazione == year)
+				.collect(Collectors.toList());
 	}
-
-	private static  searchByIsbn(Collection<Editoriale> c, long isbn1) {
-		
-		return null;
+	
+	static ArrayList<Libri> searchByAutore(ArrayList<Libri> books, String author){
+		return (ArrayList<Libri>) books.stream()
+				.filter(b -> author.equals(b.autore))
+				.collect(Collectors.toList());
 	}
 
 }
