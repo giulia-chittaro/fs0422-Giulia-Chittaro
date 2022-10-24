@@ -1,15 +1,37 @@
 package models;
 
-public abstract class Catalogo {
-	
- long ISBN;
- String titolo;
- int annoPubblicazione;
- int nPagine;
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 
- Catalogo(int ISBN  ,  String titolo , int annoPubblicazione , int nPagine ) {
+@Entity
+@Inheritance (strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn (name = "item_type", discriminatorType = DiscriminatorType.STRING)
+@Table (name = "catalogo")
+public abstract class Catalogo {
+
+@Id
+@GeneratedValue (strategy = GenerationType.IDENTITY)
+protected long ISBN;
+ protected String titolo;
+ 
+ @Column ( name = "anno_pubblicazione")
+protected int annoPubblicazione;
+ @Column ( name = "numero_pagine")
+protected int nPagine;
+ 
+ public Catalogo () {}
+
+ Catalogo( String titolo , int annoPubblicazione , int nPagine ) {
 	 
-	 this.ISBN = ISBN;
+	 
 	 this.titolo = titolo;
 	 this.annoPubblicazione = annoPubblicazione;
 	 this.nPagine = nPagine;

@@ -1,12 +1,19 @@
 package models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "libri")
 public class Libri extends Catalogo {
 	
-	public String autore;
-	public String genere;
+	private String autore;
+	private String genere;
+	
+	public Libri() {}
 
-	public Libri(int ISBN, String titolo, int annoPubblicazione, int nPagine, String autore , String genere) {
-		super(ISBN, titolo, annoPubblicazione, nPagine);
+	public Libri( String titolo, int annoPubblicazione, int nPagine, String autore , String genere) {
+		super( titolo, annoPubblicazione, nPagine);
 		this.autore = autore;
 		this.genere = genere;
 	}
@@ -15,11 +22,13 @@ public class Libri extends Catalogo {
 	
 	
 	public String toString() {
-		return "ISBN: " + this.ISBN + ", Titolo: " + this.titolo + ", Autore: " + this.autore + ", Genere: " + this.genere + ", Anno: " + this.annoPubblicazione + ", Pagine: " + this.nPagine;
+		return " Titolo: " + this.titolo + ", Autore: " + this.autore + ", Genere: " + this.genere + ", Anno: " + this.annoPubblicazione + ", Pagine: " + this.nPagine;
  	}
 
 
-
+	public long getIsbn() {
+		return ISBN;
+	}
 
 
 	public String getAutore() {

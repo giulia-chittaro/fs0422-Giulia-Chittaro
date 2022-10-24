@@ -1,21 +1,38 @@
 package models;
 
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 public class Utente {
 	
-	String nome;
-	String cognome;
-	Date dataNascita;
+	
+	@Id
+	@GeneratedValue ( strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	private String nome;
+	private String cognome;
+	private LocalDate dataNascita;
 	long numeroTessera;
 	
-	public Utente ( String nome, String cognome, Date dataNascita, long numeroTessera) {
+	@OneToMany(mappedBy = "utente")
+	private Set<Prestito> prestiti;
+	
+	public Utente () {}
+	
+	public Utente ( String nome, String cognome, LocalDate dataNascita) {
 		
 		this.nome = nome;
 		this.cognome = cognome;
 		this.dataNascita = dataNascita;
-		this.numeroTessera = numeroTessera;
+		
 	}
 	
 	
@@ -44,12 +61,12 @@ public class Utente {
 	}
 
 
-	public Date getDataNascita() {
+	public LocalDate getDataNascita() {
 		return dataNascita;
 	}
 
 
-	public void setDataNascita(Date dataNascita) {
+	public void setDataNascita(LocalDate dataNascita) {
 		this.dataNascita = dataNascita;
 	}
 
@@ -63,5 +80,8 @@ public class Utente {
 		this.numeroTessera = numeroTessera;
 	}
 
+	public int getId() {
+		return id;
+	}
 
 }
