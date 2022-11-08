@@ -20,6 +20,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Administrator\Documents\CORSO\backend\m2\w2\d5\Assegnazionedispositiviaziendali"/>
 			<item value="C:\Users\Administrator\Documents\CORSO\backend\m2\w2\d4\security"/>
 			<item value="C:\Users\Administrator\Documents\CORSO\backend\m2\w1\progetto\Gestioneprenotazioni"/>
 			<item value="C:\Users\Administrator\Documents\build-week"/>
